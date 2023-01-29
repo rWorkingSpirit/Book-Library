@@ -19,7 +19,7 @@ public class InsertBookInformation
 	private String category;
 	
 	
-	public void AskInformation()
+	public void askForInformation()
 	{		
 		System.out.println("Please input the information of the book,");
 		System.out.println("you whish to insert into the library.");
@@ -93,5 +93,16 @@ public class InsertBookInformation
 		this.category = category;
 	}
 	
+	
+	/***
+	 * Will return a String[] of the book information provided by the user.
+	 * @return
+	 */
+	public String[] getInformation()
+	{
+		String[] information = {title, author, isbn, published, cover, category};
+		
+		return information;		
+	}
 	
 }
