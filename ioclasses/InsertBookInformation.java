@@ -18,7 +18,9 @@ public class InsertBookInformation
 	private String cover;
 	private String category;
 	
-	
+	/***
+	 * Prints out the the information needed to create a Book object.
+	 */
 	public void askForInformation()
 	{		
 		System.out.println("Please input the information of the book,");
