@@ -6,11 +6,9 @@ public class Library
 		Application app = new Application();
 		app.start();
 
-
 		Menu.displayMenu();
 		int choice;
 	    
-
 		do 
 		{	
 		  choice = Menu.getChoice();
