@@ -5,31 +5,6 @@ public class Library
 	{
 		Application app = new Application();
 		app.start();
-
-		Menu.displayMenu();
-		int choice;
-	    
-		do 
-		{	
-		  choice = Menu.getChoice();
-	    
-	        switch (choice) {
-	        case 1:
-	          System.out.println("You can input a new book");
-	          break;
-	        case 2:
-	          System.out.println("You can view here all the books in the library");
-	          break;
-	        case 3:
-	          System.out.println("You can delete a book from the library");
-	          break;
-	        case 0:
-	          System.out.println("Exiting");
-	          break;
-	        default:
-	          System.out.println("Please enter a correct number!");
-	      }
-	    } while (choice != 0);
 	}
 	
 	
@@ -46,8 +21,5 @@ public class Library
 	// Goals voor Rutger
 	// - Het verwijderen van een Book object.
 	// - Deze Book Object moet ook verwijdert worden van het tekst bestand.
-	
-	
-	
 	
 }

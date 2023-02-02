@@ -27,25 +27,29 @@ public class InsertBookInformation
 		System.out.println("you whish to insert into the library.");
 		
 		System.out.print("Title: ");
-		setTitle(scanner.next());
+		setTitle(scanner.nextLine());
 		
 		System.out.print("Author: ");
-		setAuthor(scanner.next());
+		setAuthor(scanner.nextLine());
 		
 		System.out.print("ISBN: ");
-		setISBN(scanner.next());
+		setISBN(scanner.nextLine());
 		
 		System.out.print("Published: ");
-		setPublished(scanner.next());
+		setPublished(scanner.nextLine());
 		
 		System.out.println();
 		
 		System.out.println("'H' for Hardcover, 'S' for Softcover.");		
 		System.out.print("Hardcover or Softcover: ");
-		setCover(scanner.next().toLowerCase());
+		setCover(scanner.nextLine().toLowerCase());
 		
 		System.out.print("Category: ");
-		setCategory(scanner.next());
+		setCategory(scanner.nextLine());
+		
+		System.out.println();
+		
+		// To keep the text clearer in the console.
 		
 	}
 	
@@ -72,11 +76,11 @@ public class InsertBookInformation
 	
 	private void setCover(String cover)
 	{
-		if(cover == "h")
+		if(cover.equals("h"))
 		{
 			this.cover = "Hardcover";
 		}
-		else if(cover == "s")
+		else if(cover.equals("s"))
 
 		{
 			this.cover = "Softcover";
