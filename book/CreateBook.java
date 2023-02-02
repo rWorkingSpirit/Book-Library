@@ -9,24 +9,26 @@ package book;
  */
 public class CreateBook
 {
-//	Book book = new Book();
+	Book book = new Book();
 	
 	String[] bookInformation;
 
 	
-//	public void fillBook(String[] info)
-//	{
-//		bookInformation = info;
-//		
-//		
-//		Book book = new Book();
-//		
-//		
-//	}
-//	
-//	public Book getBook()
-//	{
-//		
-//		return book;
-//	}
+	public Book fillBook(String[] info)
+	{
+		bookInformation = info;
+		
+		
+		Book book = new Book();
+		
+		book.setTitle(bookInformation[0]);
+		book.setAuthor(bookInformation[1]);
+		book.setIsbn(bookInformation[2]);
+		book.setCover(bookInformation[3]);
+		book.setCategory(bookInformation[4]);
+		
+		return book;
+		
+	}
+	
 }
