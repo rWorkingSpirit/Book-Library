@@ -45,11 +45,9 @@ public class InsertBookInformation
 		setCover(scanner.nextLine().toLowerCase());
 		
 		System.out.print("Category: ");
-		setCategory(scanner.nextLine());
+		setCategory(scanner.next());
 		
-		System.out.println();
-		
-		// To keep the text clearer in the console.
+		System.out.println(); // To keep the text clearer in the console.
 		
 	}
 	
@@ -87,10 +85,13 @@ public class InsertBookInformation
 		}
 		else
 		{
+			System.out.println();
 			System.out.println("Sorry, that input was not correct.");
 			System.out.println("Please type a 'H' for Hardcover, and a 'S' for Softcover.");
+			System.out.println();
 			System.out.print("You can now type your awnser: ");
 			setCover(scanner.next().toLowerCase());
+			System.out.println();
 		}
 	}
 	

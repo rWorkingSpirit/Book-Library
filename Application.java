@@ -15,35 +15,7 @@ public class Application
 	
 	public void start()
 	{
-//		DO NOT OVERRIDE OR DELETE THE TEXT BELOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//		====================================================================================
-		
-		// Need a class called StartMenu.
-		// With a method called Menu()
-		// 1. To input a new Book
-		// 2. To view all books in the library
-		// 3. Delete a book from the library
-		
-		
-//		Application -> StartMenu
-//		Application <-(int) StartMenu
-//
-//		Application 
-//			switch
-//			switch -> InsertBookInformation
-//			switch -> view all book information
-//			switch -> deletes book
-//
-//		Application <- (Book info) InsertBookInformation
-//
-//		Application -> FillBook
-//		Application <- (Book Object)FillBook
-		
-//		Application stores the Book object in a ArrayList
-		
-		
-		
-//		====================================================================================
+
 		do
 		{
 			Menu.displayMenu();
@@ -79,7 +51,8 @@ public class Application
 					ShowAllBooks();
 					break;
 				case 3:
-					// Code to delete a given book from the library
+					// Code to delete the file containing all books
+					new DeleteFile().Delete();
 					break;
 				case 0:
 					System.out.println("Exiting the program.");
@@ -89,18 +62,21 @@ public class Application
 		}
 		while(menuNumber != 0);
 		
-		
-		
 	}
 	
 	
 	private void ShowAllBooks()
 	{
-		for(Book b: books)
+		try 
 		{
-			System.out.println("Title: " + b.getTitle());
+			new ReadFile().Read();
+		} 
+		catch (IOException e)
+		{
+			System.out.println("Cannot find the file you are looking for.");
+			System.out.println("Does the file exist?");
 		}
-		
+
 		System.out.println(); // To keep the text clearer in the console.
 	}
 	

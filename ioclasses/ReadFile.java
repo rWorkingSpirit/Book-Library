@@ -7,9 +7,9 @@ import java.nio.file.Paths;
 
 public class ReadFile 
 {
-	void ReadFile() throws IOException
+	public void Read() throws IOException
 	{
-		Path p = Paths.get("LibraryFile");
+		Path p = Paths.get("src/LibraryFile");
 		
 		Files.lines(p).forEach(line -> System.out.println(line));
 	}
