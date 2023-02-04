@@ -19,7 +19,7 @@ public class CreateFile
 		CreateText(books);
 		
 		
-		Path p = Paths.get("LibraryFile");
+		Path p = Paths.get("src/LibraryFile");
 		
 		
 		
@@ -31,7 +31,7 @@ public class CreateFile
 		else // Create file if it does not exist.
 		{
 			p.toFile().createNewFile();
-			Files.write(p, String.format("%s%n", bookInfo).getBytes(), StandardOpenOption.APPEND);
+			Files.write(p, String.format("%s%n", bookInfo).getBytes(), StandardOpenOption.WRITE);
 		}
 		
 	}
